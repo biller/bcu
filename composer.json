@@ -16,7 +16,7 @@
 	},
     "autoload": {
         "psr-4": {
-            "biller\\bcu": "src/"
+            "biller\\bcu\\": "src/"
         }
     }
 }
