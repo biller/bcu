@@ -3,7 +3,7 @@
 	"description": "Adaptador de webservices del BCU a PHP",
 	"homepage": "http://www.biller.uy/",
 	"license": "MIT",
-	"minimum-stability": "dev",
+	"minimum-stability": "stable",
     "authors": [
         {
             "name": "Juan Sorondo",
