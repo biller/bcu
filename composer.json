@@ -1,0 +1,22 @@
+{
+	"name": "biller/bcu",
+	"description": "Adaptador de webservices del BCU a PHP",
+	"homepage": "http://www.biller.uy/",
+	"license": "MIT",
+	"minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Juan Sorondo",
+            "homepage": "http://aws.amazon.com"
+        }
+    ],
+	"require": {
+		"php": "~7.0",
+		"ext-soap": "*"
+	},
+    "autoload": {
+        "psr-4": {
+            "biller\\": "src/"
+        }
+    }
+}
