@@ -9,9 +9,9 @@ use SoapClient;
 class Bcu {
 
     public static function obtenerUltimoCierre() {
-        $conexion = $this->getSoapClient('awsultimocierre');
+        $conexion = self::getSoapClient('awsultimocierre');
         $resultado = $conexion->Execute();
-        return $resultado->Fecha;
+        return $resultado->Salida->Fecha;
     }
 
     public static function obtenerCotizacion($fecha) {
@@ -27,13 +27,13 @@ class Bcu {
             ]
         ];
 
-        $client = $this->getSoapClient('awsbcucotizaciones');
+        $client = self::getSoapClient('awsbcucotizaciones');
         $response = $client->Execute($params);
 
         return $response->Salida->datoscotizaciones;
     }
 
-    private function getSoapClient($ws) {
+    private static function getSoapClient($ws) {
         $options = [
             'cache_wsdl' => WSDL_CACHE_NONE,
             'stream_context' => stream_context_create([
