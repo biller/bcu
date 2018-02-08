@@ -6,7 +6,7 @@ use DateTime;
 use Exception;
 use SoapClient;
 
-class Bcu {
+class Cotizaciones {
 
     public static function obtenerUltimoCierre() {
         $conexion = self::getSoapClient('awsultimocierre');
@@ -14,8 +14,8 @@ class Bcu {
         return $resultado->Salida->Fecha;
     }
 
-    public static function obtenerCotizacion($fecha) {
-        if (!DateTime::createFromFormat()) {
+    public static function obtenerCotizacion($fecha, $moneda = 2225) {
+        if (!DateTime::createFromFormat('Y-m-d', $fecha)) {
             throw new Exception("Formato de fecha no es AAAA-MM-DD");
         }
         $params = [
@@ -23,14 +23,14 @@ class Bcu {
                 'FechaDesde' => $fecha,
                 'FechaHasta' => $fecha,
                 'Grupo' => 2,
-                'Moneda' => ['item' => 2225],
+                'Moneda' => ['item' => $moneda],
             ]
         ];
 
         $client = self::getSoapClient('awsbcucotizaciones');
         $response = $client->Execute($params);
 
-        return $response->Salida->datoscotizaciones;
+        return $response->Salida->datoscotizaciones->{'datoscotizaciones.dato'}->TCC;
     }
 
     private static function getSoapClient($ws) {
