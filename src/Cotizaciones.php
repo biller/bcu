@@ -14,10 +14,15 @@ class Cotizaciones {
         return $resultado->Salida->Fecha;
     }
 
-    public static function obtenerCotizacion($fecha, $moneda = 2225) {
-        if (!DateTime::createFromFormat('Y-m-d', $fecha)) {
-            throw new Exception("Formato de fecha no es AAAA-MM-DD");
+    public static function obtenerCotizacion($fecha = null, $moneda = 2225) {
+        if (isset($fecha)) {
+            if (!DateTime::createFromFormat('Y-m-d', $fecha)) {
+                throw new Exception("Formato de fecha no es AAAA-MM-DD");
+            }
+        } else {
+            $fecha = self::obtenerUltimoCierre();
         }
+
         $params = [
             'Entrada' => [
                 'FechaDesde' => $fecha,
