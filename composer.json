@@ -1,6 +1,6 @@
 {
 	"name": "biller/bcu",
-	"description": "Adaptador de webservices del BCU a PHP",
+	"description": "Adaptador de WebServices del BCU para PHP",
 	"homepage": "http://www.biller.uy/",
 	"license": "MIT",
 	"minimum-stability": "stable",
