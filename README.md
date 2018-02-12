@@ -13,14 +13,20 @@ composer require biller/bcu
 
 ## Uso
 
+Luego de su instalación, se utiliza el método `obtenerCotizacion` que devolverá la última cotización de cierre para el dolar interbancario billete.
+
+También se puede obtener la fecha del último cierre a través del llamado al método `obtenerUltimoCierre`.
+
 ### Obtener cotización
 ```php
 // Dólar interbancario para el último día de cierre
 biller\bcu\Cotizaciones::obtenerCotizacion();
-
+```
+```php
 // Dólar interbancario para el 01-ene-2018
 biller\bcu\Cotizaciones::obtenerCotizacion('2018-01-01');
-
+```
+```php
 // Dólar interbancario para el 01-ene-2018
 biller\bcu\Cotizaciones::obtenerCotizacion('2018-01-01', 2225);
 ```
