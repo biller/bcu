@@ -1,3 +1,9 @@
+<p align="center">
+    <a href="https://www.biller.uy" target="_blank">
+        <img src="https://biller.uy/images/logo_trans_verde.png" width="400" alt="Biller - facturación electrónica" />
+    </a>
+</p>
+
 # Adaptador de WebServices del BCU para PHP
 
 Herramienta para obtener la cotización oficial de distintas monedas extraídas del WebService del [Banco Central del Uruguay](http://www.bcu.gub.uy/).
