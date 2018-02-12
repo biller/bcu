@@ -10,6 +10,8 @@ Herramienta para obtener la cotización oficial de distintas monedas extraídas 
 
 Los WebServices utilizados son [awsbcucotizaciones](https://cotizaciones.bcu.gub.uy/wscotizaciones/servlet/awsbcucotizaciones?wsdl) y [awsultimocierre](https://cotizaciones.bcu.gub.uy/wscotizaciones/servlet/awsultimocierre?wsdl).
 
+La documentación oficial de los WebServices [puede ser encontrada aquí](https://www.scribd.com/document/371380764/Especificacion-WS-Cotizaciones).
+
 ## Instalación
 
 La mejor forma de utilizar este plugin es a través del plugin [composer](http://getcomposer.org/download/).
