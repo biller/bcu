@@ -38,9 +38,9 @@ biller\bcu\Cotizaciones::obtenerCotizacion('2018-01-01');
 // Dólar interbancario para el 01-ene-2018
 biller\bcu\Cotizaciones::obtenerCotizacion('2018-01-01', 2225);
 ```
-El tercer parámetro indica el Grupo de Monedas.
-Grupo 1: Mercado Internacional
-Grupo 2: Cotizaciones Locales
+El tercer parámetro indica el Grupo de Monedas.<br />
+Grupo 1: Mercado Internacional<br />
+Grupo 2: Cotizaciones Locales<br />
 Grupo 0: ambos grupos
 ```php
 // Euro para ambos Grupos de Monedas para el 01-ene-2018
