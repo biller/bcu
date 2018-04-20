@@ -14,7 +14,7 @@ class Cotizaciones {
         return $resultado->Salida->Fecha;
     }
 
-    public static function obtenerCotizacion($fecha = null, $moneda = 2225) {
+    public static function obtenerCotizacion($fecha = null, $moneda = 2225, $grupo = 0) {
         if (isset($fecha)) {
             if (!DateTime::createFromFormat('Y-m-d', $fecha)) {
                 throw new Exception("Formato de fecha no es AAAA-MM-DD");
@@ -27,7 +27,7 @@ class Cotizaciones {
             'Entrada' => [
                 'FechaDesde' => $fecha,
                 'FechaHasta' => $fecha,
-                'Grupo' => 2,
+                'Grupo' => $grupo,
                 'Moneda' => ['item' => $moneda],
             ]
         ];
