@@ -4,6 +4,7 @@
 	"homepage": "http://www.biller.uy/",
 	"license": "MIT",
 	"minimum-stability": "stable",
+	"type": "library",
     "authors": [
         {
             "name": "Juan Sorondo",
@@ -18,5 +19,8 @@
         "psr-4": {
             "biller\\bcu\\": "src/"
         }
-    }
+    },
+	"require-dev": {
+		"codeception/base": "^3.1"
+	}
 }
