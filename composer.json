@@ -21,6 +21,7 @@
         }
     },
 	"require-dev": {
-		"codeception/base": "^3.1"
+		"codeception/codeception": "^4.1",
+		"codeception/module-asserts": "^1.2"
 	}
 }
