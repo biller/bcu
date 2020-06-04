@@ -15,7 +15,7 @@ class Cotizaciones
         return $resultado->Salida->Fecha;
     }
 
-    public static function obtenerCotizacion($fecha = null, $moneda = 2225, $grupo = 0)
+    public static function obtenerCotizacion($fecha = null, $moneda = 2225, $grupo = 0): float
     {
         if (isset($fecha)) {
             if (!DateTime::createFromFormat('Y-m-d', $fecha)) {
