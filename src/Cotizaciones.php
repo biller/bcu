@@ -51,7 +51,13 @@ class Cotizaciones
 
     private static function getSoapClient($ws)
     {
-        return new SoapClient("https://cotizaciones.bcu.gub.uy/wscotizaciones/servlet/$ws?wsdl");
+        $options = [
+            'stream_context' => stream_context_create([
+                'ssl' => ['cafile' => __DIR__ . "/../cacert.pem"],
+            ]),
+        ];
+
+        return new SoapClient("https://cotizaciones.bcu.gub.uy/wscotizaciones/servlet/$ws?wsdl", $options);
     }
 
     private static function cacheGet(string $fecha, int $moneda, int $grupo)
