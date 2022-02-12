@@ -12,7 +12,7 @@ class CotizacionesTest extends Unit
 
     public function testObtenerCotizacion()
     {
-        $cotizacion = Cotizaciones::obtenerCotizacion('2019-07-16');
+        $cotizacion = Cotizaciones::obtener('2019-07-16');
         $this->tester->assertEquals(35.165, $cotizacion);
     }
 }

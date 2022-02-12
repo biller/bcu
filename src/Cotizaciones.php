@@ -8,14 +8,9 @@ use SoapClient;
 
 class Cotizaciones
 {
-    public static function obtenerUltimoCierre()
-    {
-        $conexion = self::getSoapClient('awsultimocierre');
-        $resultado = $conexion->Execute();
-        return $resultado->Salida->Fecha;
-    }
+    use WsBcu;
 
-    public static function obtenerCotizacion($fecha = null, $moneda = 2225, $grupo = 0): float
+    public static function obtener($fecha = null, $moneda = 2225, $grupo = 0): float
     {
         if (isset($fecha)) {
             if (!DateTime::createFromFormat('Y-m-d', $fecha)) {
@@ -47,17 +42,6 @@ class Cotizaciones
         self::cachePut($fecha, $moneda, $grupo, $cotizacion);
 
         return $cotizacion;
-    }
-
-    private static function getSoapClient($ws)
-    {
-        $options = [
-            'stream_context' => stream_context_create([
-                'ssl' => ['cafile' => __DIR__ . "/../cacert.pem"],
-            ]),
-        ];
-
-        return new SoapClient("https://cotizaciones.bcu.gub.uy/wscotizaciones/servlet/$ws?wsdl", $options);
     }
 
     private static function cacheGet(string $fecha, int $moneda, int $grupo)
