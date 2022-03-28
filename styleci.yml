@@ -1,0 +1,21 @@
+preset: none
+risky: true
+enabled:
+  - unalign_double_arrow
+  - concat_with_spaces
+  - elseif
+  - trailing_comma_in_multiline_array
+  - psr4
+  - single_quote
+  - phpdoc_inline_tag
+  - encoding
+  - full_opening_tag
+  - blank_line_after_namespace
+  - class_definition
+  - no_whitespace_before_comma_in_array
+  - no_trailing_comma_in_singleline_array
+  - short_array_syntax
+  - trim_array_spaces
+  - whitespace_after_comma_in_array
+  - array_push
+  - blank_line_after_opening_tag
