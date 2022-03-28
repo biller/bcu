@@ -25,7 +25,7 @@ class UltimoCierre
 
     private static function cacheGet()
     {
-        $path = __DIR__ . "/../cache/ultimo_cierre.txt";
+        $path = __DIR__ . '/../cache/ultimo_cierre.txt';
 
         if (!file_exists($path)) {
             return false;
@@ -46,7 +46,7 @@ class UltimoCierre
 
     private static function cachePut($fecha)
     {
-        $path = __DIR__ . "/../cache/ultimo_cierre.txt";
+        $path = __DIR__ . '/../cache/ultimo_cierre.txt';
         file_put_contents($path, $fecha);
     }
 }

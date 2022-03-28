@@ -10,7 +10,7 @@ trait WsBcu
     {
         $options = [
             'stream_context' => stream_context_create([
-                'ssl' => ['cafile' => __DIR__ . "/../cacert.pem"],
+                'ssl' => ['cafile' => __DIR__ . '/../cacert.pem'],
             ]),
         ];
 
