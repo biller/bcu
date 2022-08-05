@@ -1,4 +1,6 @@
-<?php //[STAMP] 50bbfa50c2b72bd2ca6033f5e3c3023f
+<?php
+
+//[STAMP] 50bbfa50c2b72bd2ca6033f5e3c3023f
 
 namespace _generated;
 

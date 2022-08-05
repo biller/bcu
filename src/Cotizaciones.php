@@ -4,7 +4,6 @@ namespace biller\bcu;
 
 use DateTime;
 use Exception;
-use SoapClient;
 
 class Cotizaciones
 {
@@ -14,7 +13,7 @@ class Cotizaciones
     {
         if (isset($fecha)) {
             if (!DateTime::createFromFormat('Y-m-d', $fecha)) {
-                throw new Exception("Formato de fecha no es AAAA-MM-DD");
+                throw new Exception('Formato de fecha no es AAAA-MM-DD');
             }
         } else {
             $fecha = self::obtenerUltimoCierre();

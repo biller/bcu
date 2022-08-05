@@ -1,27 +1,27 @@
 {
-	"name": "biller/bcu",
-	"description": "Adaptador de WebServices del BCU para PHP",
-	"homepage": "http://www.biller.uy/",
-	"license": "MIT",
-	"minimum-stability": "stable",
-	"type": "library",
-    "authors": [
-        {
-            "name": "Juan Sorondo",
-            "homepage": "http://aws.amazon.com"
-        }
-    ],
-	"require": {
-		"php": "~7.0",
-		"ext-soap": "*"
-	},
-    "autoload": {
-        "psr-4": {
-            "biller\\bcu\\": "src/"
-        }
-    },
-	"require-dev": {
-		"codeception/codeception": "^4.1",
-		"codeception/module-asserts": "^1.2"
-	}
+  "name": "biller/bcu",
+  "description": "Adaptador de WebServices del BCU para PHP",
+  "homepage": "http://www.biller.uy/",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Juan Sorondo",
+      "homepage": "http://aws.amazon.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "ext-soap": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "biller\\bcu\\": "src/"
+    }
+  },
+  "require-dev": {
+    "codeception/codeception": "^4.1",
+    "codeception/module-asserts": "^1.2"
+  }
 }
