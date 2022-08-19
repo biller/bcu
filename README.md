@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://www.biller.uy" target="_blank">
-        <img src="https://biller.uy/images/logo_trans_verde.svg" width="400" alt="Biller - facturación electrónica" />
+        <img src="https://biller.uy/images/logo/logo_biller.svg" width="400" alt="Biller - facturación electrónica" />
     </a>
 </p>
 
