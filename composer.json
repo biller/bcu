@@ -22,6 +22,6 @@
   },
   "require-dev": {
     "codeception/codeception": "^4.1",
-    "codeception/module-asserts": "^1.2"
+    "codeception/module-asserts": "^1.2 || ^2.0"
   }
 }
