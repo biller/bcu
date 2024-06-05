@@ -4,18 +4,16 @@ on: [ push, pull_request ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        php-version: [7.4, 8.0, 8.1]
-
+        php-version:
+          - 8.2
     steps:
       - name: Install PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{matrix.php-version}}
+          php-version: ${{ matrix.php-version }}
 
       - uses: actions/checkout@v1
 
@@ -23,7 +21,7 @@ jobs:
         run: composer validate
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: composer install --prefer-dist --no-progress
 
       - name: Run tests
-        run: vendor/bin/codecept run
+        run: vendor/bin/phpunit tests
